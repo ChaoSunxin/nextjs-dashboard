@@ -35,6 +35,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
    */
   function serachChangeHandle(trem: string) {
     const params = new URLSearchParams(searchParams);
+    params.set('page', '1');
     if (trem) {
       params.set('query', trem);
     } else {
